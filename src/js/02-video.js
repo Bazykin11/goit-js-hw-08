@@ -6,15 +6,6 @@ const CURENT_TIME = "videoplayer-current-time";
 const iframe = document.querySelector('#vimeo-player');
 const iframePlayer = new VimeoPlayer (iframe);
 
-// iframePlayer.on('play', function() {
-//     console.log('played the video!');
-// });
-
-// iframePlayer.getVideoTitle().then(function(title) {
-//     console.log('title:', title);
-// });
-
-
 iframePlayer.on('timeupdate', throttle(onPlay, 1000)); 
 
 const PlayerStopTime = load(CURENT_TIME);
